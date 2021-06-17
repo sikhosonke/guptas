@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <style>
+      h1{
+        text-align: center;
+      }
+      body {
+        font-family: "Lato", sans-serif;
+        background-color: springgreen;
+      }
+      
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+      }
+      </style>
+
+
+
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="Home.html">Home</a>
+    <a href="Budget.html">Budget</a>
+    <a href="login - Copy.html">User</a>
+    <a href="moneyApp.html">Register</a>
+    <a href="transact page.html">Bank options</a>
+  </div>
+
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <h1><b>Register here for budget savings</b></h1>
+   <h4><p>Welcome to the money App, this App will help you save what you can for the certain period of 4 Months before you transact your cash back, this is actually a cash flow management helping your savings grow, federal insurance meaning you never lose cash through out the proccess and you can easily automatically deposit what you can it depends on your monthly expenses and you cannot get cash within obligated time you set</p></h4> 
+    
+    
+    <h1 style="color: tomato;"><b><marquee>save what you can</marquee></b></h1>
+    
+</div>
+
+
+
+ 
+
+    
+    <form action="https://r.search.yahoo.com/_ylt=AwrJ6SQPSb9g0A8AdkVXNyoA;_ylu=Y29sbwNiZjEEcG9zAzMEdnRpZANDMTYyMl8xBHNlYwNzcg--/RV=2/RE=1623177616/RO=10/RU=https%3a%2f%2faccounts.google.com%2fLogin/RK=2/RS=fuxxa0Wekn.i5YesPpwKR0.sYmA-" onsubmit="returnValidationForm()" method="post"> 
+        <div class="container">
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+      
+          <label for="psw"><b>Name and Surname</b></label>
+          <input type="password" placeholder="Enter Personal details" name="psw" id="psw" required>
+          <br>
+      
+     <br>
+
+
+          <label for="email"><b>Email Address</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+          <br>
+          <label for="psw"><b>Gender</b></label>
+          <br>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">female</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Male</label>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+         
+          <hr>
+          
+
+
+         
+
+
+          <button type="submit" class="registerbtn">Register</button>
+
+          
+        </div>
+        
+       
+      </form>
+    
+
+
+
+
+</div>
+
+
+    
+    
+<script>
+   
+  function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    
+ 
+    function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+
+var modal = document.getElementById('id01');
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

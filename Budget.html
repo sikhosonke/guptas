@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+h2{text-align: center;}
+
+table{
+   text-align: center;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: springgreen;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="Home.html">Home</a>
+  <a href="Budget.html">Budget</a>
+  <a href="login - Copy.html">User</a>
+  <a href="moneyApp.html">Register</a>
+  <a href="transact page.html">Bank options</a>
+</div>
+
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+<div id=displayEndingBalance class="section">
+    <p id="endingBalance">
+      <h2>Budget Savings</h2>
+      <img src="save.png" alt="th(2).jpg" width="300" height="300"  style="margin-left: 12cm;">
+      <br>
+       ZAR
+    </p>
+ </div>
+ <script>
+    ZAR("#displayEndingBalance").hide();
+ </script>
+ <p class="border" id=divBorder1>
+ </p>
+ <!--Section 1: Initial Funds-->
+ <div id=initialFunds class="section">
+    <p>
+       Please enter your current account balance.
+    </p>
+    <p>
+       R <input id="inputFunds" type="text">
+    </p>
+    <button id=initFundsButton>
+    Next -> </button>
+ </div>
+ <p class="border" id=divBorder2>
+ </p>
+ <!--Section 2: Debts-->
+ <div id=currDebts class="section">
+    <p>
+       Please enter any debts owed that have not been deducted from your current account balance.
+    </p>
+    <p>
+       R <input id="inputDebts" type="text">
+    </p>
+    <button id=backDebtsButton>
+    <- back </button>
+    <button id=nextDebtsButton>
+    Next -> </button>
+ </div>
+ 
+ <!--Section 3: Monthly Spending-->
+ <div id=monthlySpending class="section">
+    <p>
+       Please enter the maximum you expect to spend per month on each of the following categories.
+    </p>
+    <!--This table separates the spending categories and helps the user give an accurate account of their monthly spending-->
+    <table>
+       <tr>
+          <td>
+             Rent:
+          </td>
+          <td>
+             R <input id="inputRent" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Electric:
+          </td>
+          <td>
+             R <input id="inputElectric" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Water:
+          </td>
+          <td>
+             R <input id="inputWater" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Property Taxes:
+          </td>
+          <td>
+             R <input id="inputPropTax" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Home Insurance:
+          </td>
+          <td>
+             R <input id="inputHomeInsur" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Home Repair:
+          </td>
+          <td>
+             R <input id="inputHomeRepair" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Car Payment:
+          </td>
+          <td>
+             R <input id="inputCarPmt" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Car Insurance:
+          </td>
+          <td>
+             R <input id="inputCarInsur" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Car Repair:
+          </td>
+          <td>
+             R <input id="inputCarRepair" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Health Insurance:
+          </td>
+          <td>
+             R <input id="inputHealthInsur" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Gasoline:
+          </td>
+          <td>
+             R <input id="inputGas" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Groceries:
+          </td>
+          <td>
+             R <input id="inputGrocery" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Cable:
+          </td>
+          <td>
+             R <input id="inputCable" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Internet:
+          </td>
+          <td>
+             R <input id="inputInternet" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Phone:
+          </td>
+          <td>
+             R <input id="inputPhone" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Education:
+          </td>
+          <td>
+             R <input id="inputEducation" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Veterinary:
+          </td>
+          <td>
+             R <input id="inputVet" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Entertainment:
+          </td>
+          <td>
+             R <input id="inputEntertain" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Restaurants:
+          </td>
+          <td>
+             R <input id="inputRestaurant" type="text">
+          </td>
+       </tr>
+       <tr>
+          <td>
+             Other Expenses:
+          </td>
+          <td>
+             R <input id="inputMisc" type="text">
+          </td>
+       </tr>
+    </table>
+   
+ </div>
+ <!--Hide Section 3-->
+ <script>
+    $("#monthlySpending");
+ </script>
+ <p class="border" id=divBorder4>
+ </p>
+ <!--Section 4: Monthly Income-->
+ <div id=monthlyIncome class="section">
+    <p>
+       Please enter your total expected monthly income.
+    </p>
+    <p>
+       R <input id="inputIncome" type="text">
+    </p>
+    <button id=backIncomeButton>
+    <- back </button>
+    <button id=nextIncomeButton>
+    Next -> </button>
+ </div>
+ <!--Hide Section 4-->
+ <script>
+    $("#monthlyIncome");
+ </script>
+ <p class="border" id=divBorder5>
+ </p>
+ <!--Section 5: Time Frame-->
+ <div id=timeFrame class="section">
+    <p>
+       Please use the calendars below to choose a starting and ending date.
+    </p>
+    <p>
+       Note: Your ending balance will be calculated using the starting and ending month and years below.
+    </p>
+    <table>
+       <tr>
+          <td>
+             Start at the beginning of:
+          </td>
+          <td>
+             <select name="startMonth" id="startMonth" style="margin-left: 10px">
+                <option value="0">
+                   January 
+                </option>
+                <option value="1">
+                   February 
+                </option>
+                <option value="2">
+                   March 
+                </option>
+                <option value="3">
+                   April 
+                </option>
+                <option value="4">
+                   May 
+                </option>
+                <option value="5">
+                   June 
+                </option>
+                <option value="6">
+                   July 
+                </option>
+                <option value="7">
+                   August 
+                </option>
+                <option value="8">
+                   September 
+                </option>
+                <option value="9">
+                   October 
+                </option>
+                <option value="10">
+                   November 
+                </option>
+                <option value="11">
+                   December 
+                </option>
+             </select>
+          </td>
+          <td>
+             <select name="startYear" id="startYear" style="margin-left: 10px">
+                <option value="2014">
+                   2014
+                </option>
+                <option value="2015">
+                   2015
+                </option>
+                <option value="2016">
+                   2016 
+                </option>
+                <option value="2017">
+                   2017 
+                </option>
+                <option value="2018">
+                   2018 
+                </option>
+                <option value="2019">
+                   2019 
+                </option>
+                <option value="2020">
+                   2020
+                </option>
+                <option value="2021">
+                   2021
+                </option>
+             </select>
+          </td>
+       </tr>
+       <tr>
+          <td>
+             End at the end of:
+          </td>
+          <td>
+             <select name="endMonth" id="endMonth">
+                <option value="0">
+                   January 
+                </option>
+                <option value="1">
+                   February 
+                </option>
+                <option value="2">
+                   March 
+                </option>
+                <option value="3">
+                   April 
+                </option>
+                <option value="4">
+                   May 
+                </option>
+                <option value="5">
+                   June 
+                </option>
+                <option value="6">
+                   July 
+                </option>
+                <option value="7">
+                   August 
+                </option>
+                <option value="8">
+                   September 
+                </option>
+                <option value="9">
+                   October 
+                </option>
+                <option value="10">
+                   November 
+                </option>
+                <option value="11">
+                   December 
+                </option>
+             </select>
+          </td>
+          <td>
+             <select name="endYear" id="endYear">
+                <option value="2014">
+                   2014                        </option>
+                <option value="2015">
+                   2015 
+                </option>
+                <option value="2016">
+                   2016 
+                </option>
+                <option value="2017">
+                   2017 
+                </option>
+                <option value="2018">
+                   2018 
+                </option>
+                <option value="2019">
+                   2019 
+                </option>
+                <option value="2020">
+                   2020
+                </option>
+                <option value="2021">
+                   2021 
+                </option>
+             </select>
+             
+          </td>
+       </tr>
+    </table>
+    <button>
+    <a href="Home.html" class="previous">&laquo; Previous</a>
+    </button>
+    <button>
+<a href="transact page.html" class="next">Next &raquo;</a>
+   </button>   
+</div>
+   
+ 
+ <script>
+    $("#timeFrame");
+ </script>
+ 
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+   
+</body>
+</html> 
